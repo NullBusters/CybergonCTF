@@ -8,6 +8,13 @@ Our SOC team detected a data exfiltration case where an employee from the sales 
 
 ## Solution:
 
+Again docx document:
+
+<code>
+[01:25:24]:[michal@HACKERMAN]$ file Secret_File.docx
+Secret_File.docx: Microsoft Word 2007+
+</code>
+
 This document doesn't containg any macros or something like that, I veryfied this using oletools. When we open document in hex editor on the end of file we can see that its OOXML file, because document contains paths to xml files inside:
 
 <code>000051c0  00 00 00 00 32 2d 00 00  77 6f 72 64 2f 74 68 65  |....2-..word/the|
