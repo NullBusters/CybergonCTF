@@ -44,8 +44,7 @@ This document doesn't containg any macros or something like that, I veryfied thi
 
 I used unzip tool to extract this files:
 
-<code>
-[11:19:51]:[michal@HACKERMAN]$ unzip -qq Secret_File.docx -d output
+<code>[11:19:51]:[michal@HACKERMAN]$ unzip -qq Secret_File.docx -d output
 [11:19:51]:[michal@HACKERMAN]$ tree output/
 output/
 ├── [Content_Types].xml
@@ -65,9 +64,7 @@ output/
     ├── styles.xml
     ├── theme
     │   └── theme1.xml
-    └── webSettings.xml
-	\n
-</code>
+    └── webSettings.xml</code>
 
 in word/header1.xml file we can find some string which looks like brainfuck language with some entity characters:
 
@@ -79,17 +76,14 @@ strings like this: "gt;" and this "lt;" are entities which reprezents "<" and ">
 
 We can replace this entity representations with this python script:
 
-<code>
-#!/usr/bin/python3
+<code>#!/usr/bin/python3
 output = open("output.txt", "w")
 with open("brain_funck.txt", "r") as file:
 	lines = file.read().splitlines()
 	line = lines[0]
 	new_line = line.replace("gt;", ">")
 	new_line = new_line.replace("lt;", "<")
-	output.write(new_line)
-		\n
-</code>
+	output.write(new_line</code>
 
 Output from this script must be executed in brainfuck interpreter, i use this tool: "https://www.dcode.fr/brainfuck-language"
 
