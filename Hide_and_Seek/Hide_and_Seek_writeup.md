@@ -65,9 +65,11 @@ output/
 
 in word/header1.xml file we can find some string which looks like brainfuck language with some entity characters:
 
-++++++++++[&gt;+&gt;+++&gt;+++++++&gt;++++++++++&lt;&lt;&lt;&lt;-]&gt;&gt;&gt;---.&gt;+++++++++++++++++++++.-----------------------.+++.+++++++++++++.&lt;++++.&gt;---.-.&lt;----.+++++++++++++++++.--------------.&gt;+++++++++++++.&lt;-----------------.--.&gt;------------------------.-----------------.&lt;.++++.&gt;+++++++++++++.&lt;+++++++++++++.----------------.+++.---.&gt;.&lt;---.&gt;+++++++++++++++.---------------.&lt;+++++++++++++++++++++++.&lt;+++++++++++++++++++++.+.&gt;&gt;+++++.&lt;&lt;-.&gt;++++++++++.&gt;+++++++++++++++++++++++++.
+<p align="center">
+    <img src="screenshoots/brainfuck.png">
+</p>
 
-strings like this: "&gt;" and this "&lt;" are entities which reprezents "<" and ">" chars
+strings like this: "gt;" and this "lt;" are entities which reprezents "<" and ">" chars
 
 We can replace this entity representations with this python script:
 
@@ -77,8 +79,8 @@ output = open("output.txt", "w")
 with open("brain_funck.txt", "r") as file:
 	lines = file.read().splitlines()
 	line = lines[0]
-	new_line = line.replace("&gt;", ">")
-	new_line = new_line.replace("&lt;", "<")
+	new_line = line.replace("gt;", ">")
+	new_line = new_line.replace("lt;", "<")
 	output.write(new_line)
 </code>
 
