@@ -67,8 +67,8 @@ Archive:  Find_me.xlsx
 
 with -v we can list all files that are in this document, and by using 'unzip -qq Find_me.xlsx -d output' we can extract this files to external folder
 
-<code>[22:53:11]:[michal@HACKERMAN]$ unzip -qq Find_me.xlsx -d output
-[22:53:11]:[michal@HACKERMAN]$ tree output/
+<code>[22:53:11]:[yxzi@HACKERMAN]$ unzip -qq Find_me.xlsx -d output
+[22:53:11]:[yxzi@HACKERMAN]$ tree output/
 output/
 ├── [Content_Types].xml
 ├── _rels
