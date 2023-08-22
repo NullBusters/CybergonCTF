@@ -73,16 +73,12 @@ We can replace this entity representations with this python script:
 
 <code>
 #!/usr/bin/python3
-
 output = open("output.txt", "w")
-
 with open("brain_funck.txt", "r") as file:
 	lines = file.read().splitlines()
 	line = lines[0]
-
 	new_line = line.replace("&gt;", ">")
 	new_line = new_line.replace("&lt;", "<")
-
 	output.write(new_line)
 </code>
 
