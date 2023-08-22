@@ -68,37 +68,3 @@ Archive:  Find_me.xlsx
 with -v we can list all files that are in this document, and by using 'unzip -qq Find_me.xlsx -d output' we can extract this files to external folder
 
 flag is hide in "xl/sharedStrings.xml" file
-
-<code>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="1" uniqueCount="1"><si><t xml:space="preserve">C
-y
-b
-e
-r
-g
-o
-n
-C
-T
-F
-{
-H
-i
-d
-d
-e
-n
-_
-W
-o
-r
-d
-s
-_
-4
-_
-U
-}
-</t></si></sst>
-</code>
