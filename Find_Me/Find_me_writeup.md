@@ -46,7 +46,7 @@ when we open this file in hex editor on the end of file we can see that file con
 these paths to xml files means that this document its propably Office Open XML (OOXML) file format, and contains xml files which we can extract these by just using unzip command because OOXML are something like zip commpresed files
 
 <code>
-unzip -v Find_me.xlsx 
+[22:53:11]:[yxzi@HACKERMAN]$ unzip -v Find_me.xlsx
 Archive:  Find_me.xlsx
  Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
 --------  ------  ------- ---- ---------- ----- --------  ----
@@ -65,3 +65,40 @@ Archive:  Find_me.xlsx
    42480             9008  79%                            11 files
 </code>
 
+with -v we can list all files that are in this document, and by using 'unzip -qq Find_me.xlsx -d output' we can extract this files to external folder
+
+flag is hide in "xl/sharedStrings.xml" file
+
+<code>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sst xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" count="1" uniqueCount="1"><si><t xml:space="preserve">C
+y
+b
+e
+r
+g
+o
+n
+C
+T
+F
+{
+H
+i
+d
+d
+e
+n
+_
+W
+o
+r
+d
+s
+_
+4
+_
+U
+}
+</t></si></sst>
+</code>
