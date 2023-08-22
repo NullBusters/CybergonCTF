@@ -65,7 +65,29 @@ Archive:  Find_me.xlsx
    42480             9008  79%                            11 files
 </code>
 
-
 with -v we can list all files that are in this document, and by using 'unzip -qq Find_me.xlsx -d output' we can extract this files to external folder
+
+<code>[22:53:11]:[michal@HACKERMAN]$ unzip -qq Find_me.xlsx -d output
+[22:53:11]:[michal@HACKERMAN]$ tree output/
+output/
+├── [Content_Types].xml
+├── _rels
+├── docProps
+│   ├── app.xml
+│   └── core.xml
+└── xl
+    ├── _rels
+    │   └── workbook.xml.rels
+    ├── sharedStrings.xml
+    ├── styles.xml
+    ├── theme
+    │   └── theme1.xml
+    ├── workbook.xml
+    └── worksheets
+        ├── sheet1.xml
+        └── sheet2.xml
+
+6 directories, 10 files
+</code>
 
 flag is hide in "xl/sharedStrings.xml" file
