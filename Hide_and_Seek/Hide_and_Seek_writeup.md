@@ -61,6 +61,7 @@ output/
     ├── theme
     │   └── theme1.xml
     └── webSettings.xml
+	\n
 </code>
 
 in word/header1.xml file we can find some string which looks like brainfuck language with some entity characters:
@@ -82,6 +83,7 @@ with open("brain_funck.txt", "r") as file:
 	new_line = line.replace("gt;", ">")
 	new_line = new_line.replace("lt;", "<")
 	output.write(new_line)
+		\n
 </code>
 
 Output from this script must be executed in brainfuck interpreter, i use this tool: "https://www.dcode.fr/brainfuck-language"
