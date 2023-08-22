@@ -65,6 +65,7 @@ Archive:  Find_me.xlsx
    42480             9008  79%                            11 files
 </code>
 
+
 with -v we can list all files that are in this document, and by using 'unzip -qq Find_me.xlsx -d output' we can extract this files to external folder
 
 flag is hide in "xl/sharedStrings.xml" file
