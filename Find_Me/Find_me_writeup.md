@@ -45,7 +45,8 @@ when we open this file in hex editor on the end of file we can see that file con
 
 these paths to xml files means that this document its propably Office Open XML (OOXML) file format, and contains xml files which we can extract these by just using unzip command because OOXML are something like zip commpresed files
 
-<code>unzip -v Find_me.xlsx 
+<code>
+unzip -v Find_me.xlsx 
 Archive:  Find_me.xlsx
  Length   Method    Size  Cmpr    Date    Time   CRC-32   Name
 --------  ------  ------- ---- ---------- ----- --------  ----
