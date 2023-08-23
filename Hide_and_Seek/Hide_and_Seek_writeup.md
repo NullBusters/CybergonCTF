@@ -10,7 +10,7 @@ Our SOC team detected a data exfiltration case where an employee from the sales 
 
 Again docx document:
 
-<code>[01:25:24]:[michal@HACKERMAN]$ file Secret_File.docx
+<code>[01:25:24]:[yxzi@HACKERMAN]$ file Secret_File.docx
 Secret_File.docx: Microsoft Word 2007+</code>
 
 This document doesn't containg any macros or something like that, I veryfied this using oletools. When we open document in hex editor on the end of file we can see that its OOXML file, because document contains paths to xml files inside:
@@ -44,8 +44,8 @@ This document doesn't containg any macros or something like that, I veryfied thi
 
 I used unzip tool to extract this files:
 
-<code>[11:19:51]:[michal@HACKERMAN]$ unzip -qq Secret_File.docx -d output
-[11:19:51]:[michal@HACKERMAN]$ tree output/
+<code>[11:19:51]:[yxzi@HACKERMAN]$ unzip -qq Secret_File.docx -d output
+[11:19:51]:[yxzi@HACKERMAN]$ tree output/
 output/
 ├── [Content_Types].xml
 ├── _rels
