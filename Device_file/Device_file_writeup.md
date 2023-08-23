@@ -158,18 +158,14 @@ We know attacker ip address: 192.168.1.67, the first successfuly login to machin
 The second stage of this task is to caluclate how many times attacker failed in logon. Its just calculate how many times appears string "Failed password for ubuntu from 192.168.1.67", I wasm use python script for this task:
 
 <code>#!/usr/bin/python3
-
 string = "Failed password for ubuntu from 192.168.1.67"
 counter = 0
-
 with open("auth.log", "r") as file:
 	lines = file.read().splitlines()
 	for line in lines:
 		if string in line:
 			counter += 1
-
 	file.close()
-
 print(counter)</code>
 
 <code>[00:35:10]:[michal@HACKERMAN]$ python3 solver.py
