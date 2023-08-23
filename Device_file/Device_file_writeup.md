@@ -70,10 +70,10 @@ Jul 15 13:21:49 ubuntu wpa_supplicant[508]: wlan0: Trying to associate with SSID
 Passwords to wifi networks are stored in network connfiguration files, more precisely: /etc/netplan/. In this case password for this network was saved in this file: /etc/netplan/50-cloud-init.yaml
 
 <code># This file is generated from information provided by the datasource.  Changes
-# to it will not persist across an instance reboot.  To disable cloud-init's
-# network configuration capabilities, write a file
-# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
-# network: {config: disabled}
+ to it will not persist across an instance reboot.  To disable cloud-init's
+ network configuration capabilities, write a file
+ /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+ network: {config: disabled}
 network:
     ethernets:
         eth0:
